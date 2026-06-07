@@ -80,7 +80,7 @@
       font-weight: bold;
     }
 
-    .photo-area {
+    .-area {
       width: 220px;
       height: 270px;
       background: #d4bfa0;
@@ -94,7 +94,7 @@
       overflow: hidden;
     }
 
-    .photo-area img {
+    .-area img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -260,18 +260,18 @@
   <h1 class="wanted-title">WANTED</h1>
   <div class="dead-or-alive">Dead or Alive</div>
 
-  <!-- ✅ FIXED PHOTO - apni photo ka naam yahan likho -->
-  <div class="photo-area">
+  <!-- ✅ FIXED  - apni  ka naam yahan likho -->
+  <div class="-area">
     <div class="reveal-overlay" id="revealOverlay">
       <div class="flicker-text">REVEALING<br>IDENTITY...</div>
     </div>
-    <img id="criminalPhoto" src="photo.jpg" alt="Criminal Photo" />
+    <img id="criminal" src=".jpg" alt="Criminal " />
   </div>
 
-  <!-- ✅ CHANGE PHOTO BUTTON -->
-  <input type="file" id="fileInput" accept="image/*" onchange="handlePhoto(event)" />
+  <!-- ✅ CHANGE  BUTTON -->
+  <input type="file" id="fileInput" accept="image/*" onchange="handle(event)" />
   <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
-    🔄 Change Photo
+    🔄 Change 
   </button>
 
   <p class="edit-hint" style="margin-top:12px;">✎ Click to edit name</p>
@@ -299,14 +299,14 @@
 </div>
 
 <script>
-  function handlePhoto(event) {
+  function handle(event) {
     const file = event.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = function(e) {
       const overlay = document.getElementById('revealOverlay');
-      const img = document.getElementById('criminalPhoto');
+      const img = document.getElementById('criminal');
 
       overlay.style.display = 'flex';
 
